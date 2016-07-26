@@ -1,12 +1,5 @@
 <?php
 
-// $db = new SQLite3('database.db');
-
-// seedData($db);
-
-// $db->close();
-
-
 function seedData($db){
     $db->exec('CREATE TABLE IF NOT EXISTS networks (network VARCHAR(20))');
 
