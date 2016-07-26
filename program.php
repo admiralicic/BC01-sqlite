@@ -6,6 +6,10 @@ if(count($argv) !== 4){
     die("Invalid number of parameters!".PHP_EOL);
 }
 
+if(substr($argv[2], -3) !== ".db"){
+    die("Invalid database file extension".PHP_EOL);
+}
+
 if(!filter_var($argv[3], FILTER_VALIDATE_IP)){
     die("Invalid ip format!".PHP_EOL);
 }
