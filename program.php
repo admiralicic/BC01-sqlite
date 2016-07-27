@@ -16,7 +16,7 @@ if(!filter_var($argv[3], FILTER_VALIDATE_IP)){
 
 $db = new SQLite3($argv[2]);
 seedData($db);
-$networks = getNetworks($db);
+$networks = getNetworks($db, "WHERE network != '127.0.0.0/8'");
 $db->close();
 
 $ip_address = $argv[3];

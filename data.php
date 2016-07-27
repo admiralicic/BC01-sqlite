@@ -15,8 +15,8 @@ function seedData($db){
     $countResult->finalize();
 }
 
-function getNetworks($db){
-    $results = $db->query('SELECT * FROM networks');
+function getNetworks($db, $filter){
+    $results = $db->query('SELECT * FROM networks '.$filter);
 
     $networks = [];
 
